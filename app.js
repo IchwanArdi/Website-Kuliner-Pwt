@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   }
 });
 
-app.get('/about', (req, res) => {
+app.get('/testing', (req, res) => {
   res.render('about'); // Mengirim data ke template EJS
 });
 
