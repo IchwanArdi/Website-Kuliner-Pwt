@@ -1,0 +1,270 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #131f2d;
+  font-family: Roboto;
+}
+/* Navigation Link */
+.nav-link {
+  font-family: Poppins, sans-serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-link:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  margin: 12rem 0rem;
+  border: 1px solid red;
+}
+
+.simbol-nav {
+  margin: 0rem 1rem;
+  font-size: 20px;
+  color: white;
+}
+
+.icons-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+}
+
+.offcanvas {
+  background-color: rgb(15, 23, 42);
+}
+
+/* About Section */
+#about {
+  margin-top: 5rem;
+  text-align: center;
+  display: flex;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 15px;
+  -webkit-mask: url(../svg/splace.svg) center / 120% no-repeat;
+}
+
+.about-text {
+  margin-top: 8rem;
+  font-size: 20px;
+  letter-spacing: 0.2rem;
+}
+
+/* Card Section */
+#card {
+  background-color: white;
+  margin: 3rem 0;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  opacity: 85%;
+}
+
+/* Card Styling */
+.col-md-3 {
+  margin: 2rem 3rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgb(53, 53, 53);
+  text-align: center;
+  color: black;
+}
+
+/* Keunggulan Section */
+.keunggulan-container {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: white;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Accordion Styles */
+.accordion-item,
+.accordion-body {
+  background-color: transparent !important;
+  color: rgb(214, 211, 211);
+  border: none;
+  text-align: left;
+}
+
+.accordion-button {
+  background-color: transparent !important;
+  box-shadow: none;
+  color: white;
+}
+
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+  outline: none !important;
+  color: white;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+#footer {
+  background-color: rgb(15, 23, 42);
+  color: white;
+  margin-top: 4rem;
+  padding-top: 5rem;
+  display: flex;
+}
+
+#footer h3,
+p {
+  color: rgb(209, 202, 202);
+}
+
+#footer p a {
+  color: rgb(209, 202, 202);
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#footer p a:hover {
+  color: white;
+}
+#head {
+  margin-bottom: 1rem;
+}
+
+.icons {
+  border: 1px solid white;
+  margin: 1rem 0.5rem;
+  border-radius: 100%;
+  padding: 5px 13px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.icons:hover {
+  background-color: rgb(20 184 166);
+  color: white;
+  border: 1px solid rgb(20 184 166);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+
+.copyright span {
+  color: white;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-img {
+    order: 1;
+  }
+  .about-text {
+    order: 2;
+  }
+  .img-fload {
+    order: 3;
+  }
+  .text-fload {
+    order: 4;
+  }
+
+  #card {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+
+  .col-md-3 {
+    width: 500px;
+    margin: 1rem 0;
+    padding-bottom: 5rem;
+    border-radius: 5px;
+  }
+  #footer .col-md-5 {
+    text-align: left !important;
+  }
+}
+
+/* Small devices (400px and down) */
+@media (max-width: 400px) {
+  #about {
+    margin-top: 2rem;
+  }
+  .about-img {
+    width: 70%;
+  }
+  .about-text {
+    margin-top: 2rem;
+    font-size: 15px;
+    letter-spacing: 0.1rem;
+  }
+  #card {
+    background-color: white;
+    margin: 3rem 0;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    opacity: 85%;
+  }
+
+  /* Card Styling */
+  .col-md-3 {
+    border-bottom: 1px solid black;
+    margin: 1rem 0rem;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0px 0px rgb(53, 53, 53);
+    text-align: center;
+    color: black;
+  }
+  .icons {
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+  .copyright {
+    font-size: 15px;
+  }
+}

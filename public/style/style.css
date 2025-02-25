@@ -1,0 +1,283 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #131f2d;
+  font-family: Roboto;
+}
+
+/* Navigation Link */
+.nav-link {
+  font-family: Poppins, sans-serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-link:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  margin: 12rem 0rem;
+  border: 1px solid red;
+}
+
+.simbol-nav {
+  margin: 0rem 1rem;
+  font-size: 20px;
+  color: white;
+}
+
+.icons-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+}
+
+.offcanvas {
+  background-color: rgb(15, 23, 42);
+}
+
+/* Carousel Caption */
+.carousel-caption {
+  margin-bottom: 5rem;
+  font-size: 3rem;
+}
+
+/* ukuran gambar */
+.carousel-item img {
+  height: 90vh;
+}
+
+/* Food Gallery */
+#foodGallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.food-item {
+  flex: 0 0 auto;
+}
+
+.gambar-makanan {
+  transition: 0.3s;
+}
+
+.gambar-makanan:hover {
+  opacity: 70%;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* List Styling */
+.list {
+  display: inline-flex; /* Ensure items are in one row */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list li {
+  color: rgb(210, 201, 201);
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.list li:hover {
+  color: white;
+}
+
+/* Scrollable Container */
+.scroll-container {
+  width: 100%; /* Match parent width */
+  overflow-x: auto;
+  white-space: nowrap; /* Prevent wrapping */
+  scrollbar-width: none; /* Hide scrollbar (Firefox) */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar (Webkit browsers) */
+}
+
+/* Text Restoran */
+.text-restoran {
+  border-bottom: 1px solid yellow;
+}
+
+/* Number Buttons */
+.number button {
+  width: 60px;
+  font-size: 15px;
+  color: white;
+  font-weight: 800;
+  margin: 0.5rem;
+  background-color: black;
+  border: none;
+}
+
+.number button:nth-child(2),
+.number button:nth-child(3) {
+  background-color: white;
+  color: black;
+}
+
+#footer {
+  background-color: rgb(15, 23, 42);
+  color: white;
+  margin-top: 4rem;
+  padding-top: 5rem;
+  display: flex;
+}
+
+#footer h3,
+p {
+  color: rgb(209, 202, 202);
+}
+
+#footer p a {
+  color: rgb(209, 202, 202);
+  text-decoration: none;
+  font-size: 17px;
+}
+#footer p a:hover {
+  color: white;
+}
+#head {
+  margin-bottom: 1rem;
+}
+
+.icons {
+  border: 1px solid white;
+  margin: 1rem 0.5rem;
+  border-radius: 100%;
+  padding: 5px 13px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.icons:hover {
+  background-color: rgb(20 184 166);
+  color: white;
+  border: 1px solid rgb(20 184 166);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+
+.copyright span {
+  color: white;
+}
+
+/* Responsive Styles */
+
+/* Large devices (1200px and down) */
+@media (max-width: 1200px) {
+}
+
+/* Medium devices (990px and down) */
+@media (max-width: 990px) {
+  .main {
+    height: 80vh;
+  }
+
+  .headline {
+    position: absolute;
+    bottom: 1.5rem;
+    padding: 5px;
+    left: 0;
+    width: 100%;
+  }
+
+  .kolom {
+    width: 330px;
+  }
+
+  .number button {
+    display: none;
+  }
+}
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .carousel-caption {
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+  }
+
+  .carousel-caption .btn {
+    font-size: 10px;
+  }
+
+  .food-item .gambar-makanan {
+    width: 250px !important;
+  }
+
+  .kolom {
+    width: 400px;
+  }
+}
+
+/* Small devices (400px and down) */
+@media (max-width: 400px) {
+  .carousel-item img {
+    height: 80vh;
+  }
+
+  .food-item .gambar-makanan {
+    height: 200px !important;
+  }
+
+  .kolom {
+    margin: 0 1rem;
+  }
+
+  .kolom img {
+    height: 250px;
+  }
+
+  .kolom h5 {
+    font-size: medium;
+  }
+
+  .kolom p,
+  .kolom ul li,
+  .kolom button {
+    font-size: small;
+  }
+
+  .list li {
+    margin-left: 1rem;
+    font-size: small;
+  }
+  .icons {
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+  .copyright {
+    font-size: 15px;
+  }
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  transition: opacity 1s ease-in-out;
+}

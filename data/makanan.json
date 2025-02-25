@@ -1,0 +1,28 @@
+{
+  "makanan": [
+    {
+      "nama": "Getuk Goreng",
+      "gambar": "1.jpg"
+    },
+    {
+      "nama": "Sroto Sokaraja",
+      "gambar": "2.jpg"
+    },
+    {
+      "nama": "Lumpia Boom",
+      "gambar": "3.jpg"
+    },
+    {
+      "nama": "Kraca",
+      "gambar": "4.jpg"
+    },
+    {
+      "nama": "Kluban Purwokerto",
+      "gambar": "5.jpg"
+    },
+    {
+      "nama": "Klanting Purwokerto",
+      "gambar": "6.jpg"
+    }
+  ]
+}

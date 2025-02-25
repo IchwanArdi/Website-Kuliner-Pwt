@@ -1,0 +1,46 @@
+{
+  "restoran": [
+    {
+      "kategori": "purwokerto",
+      "nama": "Table Nine Kitchen",
+      "tempat": "Asia, Indonesia",
+      "deskripsi": "'Irisan sosis sapi, daging sapi cincang, burger sapi, sosis ayam.'",
+      "gambar": "1.jpg"
+    },
+    {
+      "kategori": "karangpucung",
+      "nama": "Gubug Makan Mang Engking Purwokerto",
+      "tempat": "Makanan Laut, Asia",
+      "deskripsi": "'Daging ayam dan sapi asap, daging sapi cincang, burger sapi, jamur, paprika merah dan paprika hijau.'",
+      "gambar": "2.jpg"
+    },
+    {
+      "kategori": "purwokerto",
+      "nama": "Level Up",
+      "tempat": "Kafe",
+      "deskripsi": "'Irisan daging ikan tuna, butiran jagung, saus mayonnaise.'",
+      "gambar": "3.jpg"
+    },
+    {
+      "kategori": "purwokerto",
+      "nama": "Tempe Mendoan Eco 21",
+      "tempat": "Makanan Cepat Saji, Asia",
+      "deskripsi": "'Pepperoni sapi, daging sapi cincang, jamur.'",
+      "gambar": "4.jpg"
+    },
+    {
+      "kategori": "banyumas",
+      "nama": "Beef Spaghetti",
+      "tempat": "Cina, Asia",
+      "deskripsi": "'Pepperoni sapi, daging sapi cincang, jamur.'",
+      "gambar": "5.jpg"
+    },
+    {
+      "kategori": "banyumas",
+      "nama": "Baturaden, Banyumas",
+      "tempat": "Asia, Indonesia",
+      "deskripsi": "'Dipanggang, daging sapi cincang. krim putih lembut di tiap lapisan.'",
+      "gambar": "6.jpg"
+    }
+  ]
+}
