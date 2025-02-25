@@ -17,7 +17,13 @@ app.set('view engine', 'ejs');
 
 // Route utama
 app.get('/', (req, res) => {
-  res.render('index', { makanan: dataMakanan }); // Mengirim data ke template EJS
+  try {
+    console.log('Data Makanan:', dataMakanan); // Cek apakah dataMakanan tersedia
+    res.render('index', { makanan: dataMakanan }); // Render halaman
+  } catch (error) {
+    console.error('Terjadi error:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get('/about', (req, res) => {
