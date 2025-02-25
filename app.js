@@ -1,9 +1,9 @@
 const express = require('express');
 const restoran = require('./restoran');
-const makanan = require('./restoran');
+const makanan = require('./makanan'); // Pastikan ini benar
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const dataRestoran = restoran.loadRestoran(); // Memuat data dari file JSON
 const dataMakanan = makanan.loadMakanan(); // Memuat data dari file JSON
@@ -28,7 +28,7 @@ app.get('/contact', (req, res) => {
   res.render('contact'); // Mengirim data ke template EJS
 });
 
-// halaman detail contact
+// Halaman detail restoran
 app.get('/restoran/:nama', (req, res) => {
   const restoranDetail = restoran.detailRestoran(req.params.nama);
   if (restoranDetail) {
