@@ -1,12 +1,13 @@
 const fs = require('fs');
-
 const path = require('path');
 
 function loadRestoran() {
   try {
-    const data = fs.readFileSync('data/restoran.json', 'utf-8');
+    // Gunakan path absolut untuk memastikan lokasi file benar
+    const filePath = path.resolve(__dirname, 'data', 'restoran.json');
+    const data = fs.readFileSync(filePath, 'utf-8');
     const jsonData = JSON.parse(data);
-    return jsonData.restoran || []; // Ambil array restoran dari objek JSON
+    return jsonData.restoran || [];
   } catch (error) {
     console.error('Gagal memuat restoran:', error);
     return [];
