@@ -1,12 +1,11 @@
 const express = require('express');
-const restoran = require('./restoran');
-const makanan = require('./makanan'); // Pastikan ini benar
+const restoran = require('../restoran');
+const makanan = require('../makanan');
 
 const app = express();
-const port = process.env.PORT || 3000;
 
-const dataRestoran = restoran.loadRestoran(); // Memuat data dari file JSON
-const dataMakanan = makanan.loadMakanan(); // Memuat data dari file JSON
+const dataRestoran = restoran.loadRestoran();
+const dataMakanan = makanan.loadMakanan();
 
 // Middleware untuk menangani form dan file statis
 app.use(express.urlencoded({ extended: true }));
@@ -17,15 +16,20 @@ app.set('view engine', 'ejs');
 
 // Route utama
 app.get('/home', (req, res) => {
-  res.render('index', { makanan: dataMakanan }); // Mengirim data ke template EJS
+  res.render('index', { makanan: dataMakanan });
+});
+
+app.get('/', (req, res) => {
+  // Redirect ke /home
+  res.redirect('/home');
 });
 
 app.get('/about', (req, res) => {
-  res.render('about'); // Mengirim data ke template EJS
+  res.render('about');
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact'); // Mengirim data ke template EJS
+  res.render('contact');
 });
 
 // Halaman detail restoran
@@ -43,7 +47,5 @@ app.use((req, res) => {
   res.status(404).send('<h1>Page Not Found!</h1>');
 });
 
-// Menjalankan server
-app.listen(port, () => {
-  console.log(`Server berjalan di http://localhost:${port}`);
-});
+// Untuk deployment Vercel
+module.exports = app;
