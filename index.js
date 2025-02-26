@@ -22,7 +22,12 @@ app.get('/', (req, res) => {
 
 // Route utama
 app.get('/home', (req, res) => {
-  res.render('index', { makanan: dataMakanan });
+  try {
+    res.render('index', { makanan: dataMakanan });
+  } catch (error) {
+    console.error('Error saat render halaman home:', error);
+    res.status(500).send('Terjadi kesalahan pada server');
+  }
 });
 
 app.get('/about', (req, res) => {
