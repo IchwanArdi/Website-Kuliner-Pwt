@@ -10,10 +10,9 @@ const dataMakanan = makanan.loadMakanan();
 
 // Middleware untuk menangani form dan file statis
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
-
-// Menggunakan EJS sebagai template engine
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
 // Root route - redirect ke home
 app.get('/', (req, res) => {
@@ -23,7 +22,7 @@ app.get('/', (req, res) => {
 // Route utama
 app.get('/home', (req, res) => {
   try {
-    res.render('index.ejs', { makanan: dataMakanan });
+    res.render('index', { makanan: dataMakanan });
   } catch (error) {
     console.error('Error saat render halaman home:', error);
     res.status(500).send('Terjadi kesalahan pada server');
