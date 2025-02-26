@@ -5,7 +5,6 @@ const makanan = require('./makanan');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const dataRestoran = restoran.loadRestoran();
 const dataMakanan = makanan.loadMakanan();
 
 // Middleware untuk menangani form dan file statis
